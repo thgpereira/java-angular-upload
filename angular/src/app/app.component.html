@@ -1,0 +1,17 @@
+<div>
+  <div class="section">
+    <h3>Exemplo FormData</h3>
+    <input type="file" (change)="selectFile($event)">
+    <button class="button" (click)="uploadFormData()">upload</button>
+    <p class="percent">{{progressFormData}}%</p>
+    <a class="link" [href]="getDownloadLinkFormData()">{{currentFileUpload?.name}}</a>
+  </div>
+  <hr>
+  <div class="section">
+    <h3>Exemplo Ng2</h3>
+    <input type="file" ng2FileSelect [uploader]="uploader" />
+    <button class="button" (click)="uploader.uploadAll()">upload</button>
+    <p class="percent">{{progressNg2}}%</p>
+    <a class="link" [href]="getDownloadLinkNg2()">{{ng2File?.name}}</a>
+  </div>
+</div>
